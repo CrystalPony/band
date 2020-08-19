@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import './App.css'
 import { ThemeProvider } from 'styled-components'
 import theme from 'ui/theme'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import Navbar from 'components/Navbar'
 import TransactionPopup from 'components/TransactionPopup'
 import ModalEntry from 'components/ModalEntry'
@@ -15,6 +15,7 @@ import localeMessages from 'locales'
 import bcp47 from 'bcp-47'
 
 class App extends Component {
+
   render() {
     const language = bcp47.parse(navigator.language).language
     return (
